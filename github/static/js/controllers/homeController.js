@@ -1,4 +1,4 @@
-function homeController($scope, $http, $window, $location) {
+function homeController($scope, $http, $location) {
     console.log($scope);
 //    $scope.repoInfo = false;
     $scope.customModal = false;

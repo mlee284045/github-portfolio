@@ -1,4 +1,4 @@
-var github = angular.module('github', ['ngRoute']);
+var github = angular.module('github', ['ngRoute', 'ui.bootstrap', 'ngResource', 'ngSanitze']);
 
 github.config(['$routeProvider', function($routeProvider) {
     // Route code will go here
