@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Welcome to Angular Github</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 home-repo" ng-repeat="repo in repositories">
+            <img class="home-repo-icon" src="static/img/filecabinet.png">
+            <div class="home-repo-info">
+                <a href="{{ repo.html_url }}"><h3>{{ repo.name }}</h3></a>
+                <p>Created by: <b>{{ repo.owner.login }}</b></p>
+                <button class="btn" ng-click="showDescription();">See More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--- Custom Modal --->
+<div ng-show="customModal" ng-class="modalStyle">
+    <div>
+        <p class="lead"><b>{{selectedRepo.name}}</b></p>
+        <p><b>Created by: </b> {{ selectedRepo.owner.login }}</p>
+        <p><b>Description: </b> {{ selectedRepo.description }}</p>
+        <button class="btn btn-primary" ng-click="allRepos();">Back to Repos</button>
+        <button class="btn btn-success" ng-click="selectRepo();">See this Repo</button>
+    </div>
+</div>
