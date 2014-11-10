@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Github Portfolio</title>
+    <!--- Core Angular JS Files ---->
+    <script src="{% static 'js/vendors/angular/angular.js' %}"></script>
+    <script src="{% static 'js/vendors/angular/angular-route.js' %}"></script>
+    <script src="{% static 'js/vendors/jquery-2.1.1.min.js' %}"></script>
+
+    <!--- Main App Script --->
+    <script src="{% static 'js/github.js' %}"></script>
+
+    <!--- Controllers --->
+    <script src="{% static 'js/controllers/homeController.js' %}"></script>
+    <script src="{% static 'js/controllers/repoController.js' %}"></script>
+
+    <!--- Stylesheets --->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+    <h2>Hello World!</h2><hr>
+    <div ng-app="github">
+        <div class="view" ng-view></div>
+    </div>
+</body>
+</html>
