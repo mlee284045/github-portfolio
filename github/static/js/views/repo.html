@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <h2>This is an individual Repo Page</h2>
+        <h1>{{ repoName }}</h1>
+        <h3>Created by: {{ ownerName }}</h3>
+
+        <input ng-model="contentPath" placeholder="file path"><br>
+        <button ng-click="getContent();">Get Content</button>
+        <div>
+            <h4>Code: </h4>
+            <pre>{{ content }}</pre>
+        </div>
+    </div>
+</div>
